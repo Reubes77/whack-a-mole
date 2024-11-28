@@ -44,9 +44,9 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 70px;
-    width: 500px;
-    height: 500px;
+    gap: 20px;
+    width: 300px;
+    height: 300px;
     margin: 30px;
 }
 
@@ -63,9 +63,18 @@ body {
     margin: 20px;
 }
 
+#reset-button {
+    color: #fff;
+    background-color: #000000;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 /* Media query: larger and landscape phones (576px and up) */
 @media screen and (min-width: 480px) {
-    body /*{
+    body
+    /*{
         font-family: 'Inter', sans-serif;
         background-color: #B45F06;
         color: #fff;
@@ -77,13 +86,169 @@ body {
         height: 100%;
     }
 }*/
-/*
-.game-arena {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 70px;
-    width: 500px;
-    height: 500px;
-    margin: 70px;
-}*/
+
+    .heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        font-size: 4em;
+    }
+
+    .sub-text {
+        font-size: 2em;
+    }
+
+    .game-arena {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 70px;
+        width: 500px;
+        height: 500px;
+        margin: 70px;
+    }
+
+    #score-area {
+        margin: 20px;
+        font-size: 2em;
+    }
+
+    #reset-button {
+        /*color: #fff;*/
+        background-color: #000000;
+        margin: 20px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .heading {
+        /*display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        font-size: 4em;*/
+        margin: 30px;
+    }
+
+    .sub-text {
+        font-size: 2em;
+        margin: 20px 0 0 0;
+    }
+
+    .game-arena {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 70px;
+        width: 700px;
+        height: 700px;
+        margin: 90px;
+    }
+
+    #score-area {
+        margin: 0 0 20px 0;
+        font-size: 2em;
+    }
+
+    #reset-button {
+        /*color: #fff;*/
+        background-color: #000000;
+        margin: 20px;
+        padding: 10px;
+        width: 200px;
+        height: 60px;
+        font-size: x-large;
+        border-radius: 10px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .heading {
+        /*display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        font-size: 4em;*/
+        margin: 10px;
+    }
+
+    .sub-text {
+        font-size: 2em;
+        margin: 0;
+    }
+
+    .game-arena {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 40px;
+        width: 550px;
+        height: 550px;
+        margin: 40px;
+    }
+
+    #score-area {
+        margin: 0 0 20px 0;
+        font-size: 2em;
+    }
+
+    #reset-button {
+        /*color: #fff;*/
+        background-color: #000000;
+        margin: 20px;
+        padding: 10px;
+        width: 200px;
+        height: 60px;
+        font-size: x-large;
+        border-radius: 10px;
+    }
+  } 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .heading {
+        /*display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;*/
+        font-size: 4em;
+        margin: 15px 0 0 0;
+    }
+
+    .sub-text {
+        font-size: x-large;
+        margin: 10px 0 0 0;
+    }
+
+    .game-arena {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 50px;
+        width: 600px;
+        height: 600px;
+        margin: 30px;
+        padding: 20px;
+    }
+
+    #score-area {
+        margin: 0 0 10px 0;
+        font-size: x-large;
+    }
+
+    #reset-button {
+        /*color: #fff;*/
+        background-color: #000000;
+        margin: 0;
+        /*padding: 10px;*/
+        width: 150px;
+        height: 40px;
+        font-size: large;
+        border-radius: 10px;
+    }
+  } 
