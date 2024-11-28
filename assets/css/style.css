@@ -217,23 +217,23 @@ body {
         align-items: center;
         padding: 20px;*/
         font-size: 4em;
-        margin: 15px 0 0 0;
+        margin: 0;
     }
 
     .sub-text {
         font-size: x-large;
-        margin: 10px 0 0 0;
+        margin: 0;
     }
 
     .game-arena {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        gap: 50px;
-        width: 600px;
-        height: 600px;
-        margin: 30px;
-        padding: 20px;
+        gap: 40px;
+        width: 500px;
+        height: 500px;
+        margin: 40px;
+        /*padding: 20px;*/
     }
 
     #score-area {
@@ -244,7 +244,7 @@ body {
     #reset-button {
         /*color: #fff;*/
         background-color: #000000;
-        margin: 0;
+        margin: 10px;
         /*padding: 10px;*/
         width: 150px;
         height: 40px;
