@@ -59,6 +59,16 @@ body {
     align-content: center;
 }
 
+.mole-hammer {
+    height: 120px;
+    width: 70px;
+    background-image: url('assets/mole-hammer.png');
+    background-size: 100%;
+    position: absolute;
+    top: 80px;
+    left: 80px;
+}
+
 #score-area {
     margin: 20px;
 }
@@ -109,6 +119,16 @@ body {
         margin: 70px;
     }
 
+    .mole-hammer {
+        height: 180px;
+        width: 120px;
+        background-image: url('assets/mole-hammer.png');
+        background-size: 100%;
+        position: absolute;
+        top: 80px;
+        left: 80px;
+    }
+
     #score-area {
         margin: 20px;
         font-size: 2em;
@@ -147,6 +167,16 @@ body {
         width: 700px;
         height: 700px;
         margin: 90px;
+    }
+
+    .mole-hammer {
+        height: 180px;
+        width: 120px;
+        background-image: url('assets/mole-hammer.png');
+        background-size: 100%;
+        position: absolute;
+        top: 80px;
+        left: 80px;
     }
 
     #score-area {
@@ -192,6 +222,16 @@ body {
         margin: 40px;
     }
 
+    .mole-hammer {
+        height: 170px;
+        width: 110px;
+        background-image: url('assets/mole-hammer.png');
+        background-size: 100%;
+        position: absolute;
+        top: 80px;
+        left: 80px;
+    }
+
     #score-area {
         margin: 0 0 20px 0;
         font-size: 2em;
@@ -234,6 +274,16 @@ body {
         height: 500px;
         margin: 40px;
         /*padding: 20px;*/
+    }
+
+    .mole-hammer {
+        height: 180px;
+        width: 120px;
+        background-image: url('assets/mole-hammer.png');
+        background-size: 100%;
+        position: absolute;
+        top: 80px;
+        left: 80px;
     }
 
     #score-area {
