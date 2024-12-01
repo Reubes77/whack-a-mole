@@ -57,9 +57,32 @@ body {
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.mole-hammer {
+.hole.active {
+    background-color: #9900FF;
+}
+
+/*
+.hole .mole {
+    left: 30%;
+    width: 60%;
+    position: absolute;
+}*/
+
+.mole {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: none;
+}
+
+/*.mole-hammer {
     height: 120px;
     width: 70px;
     background-image: url('assets/mole-hammer.png');
@@ -67,16 +90,22 @@ body {
     position: absolute;
     top: 80px;
     left: 80px;
+}*/
+
+h2.score-text {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 10px 0;
 }
 
 #score-area {
-    margin: 20px;
+    margin: 0 20px 20px 20px;
 }
 
-#reset-button {
+#start-button {
     color: #fff;
     background-color: #000000;
-    margin: 20px;
+    margin: 0 20px 20px;
     padding: 10px;
     border-radius: 10px;
 }
@@ -119,7 +148,7 @@ body {
         margin: 70px;
     }
 
-    .mole-hammer {
+    /*.mole-hammer {
         height: 180px;
         width: 120px;
         background-image: url('assets/mole-hammer.png');
@@ -127,14 +156,14 @@ body {
         position: absolute;
         top: 80px;
         left: 80px;
-    }
+    }*/
 
     #score-area {
         margin: 20px;
         font-size: 2em;
     }
 
-    #reset-button {
+    #start-button {
         /*color: #fff;*/
         background-color: #000000;
         margin: 20px;
@@ -169,7 +198,7 @@ body {
         margin: 90px;
     }
 
-    .mole-hammer {
+    /*.mole-hammer {
         height: 180px;
         width: 120px;
         background-image: url('assets/mole-hammer.png');
@@ -177,14 +206,14 @@ body {
         position: absolute;
         top: 80px;
         left: 80px;
-    }
+    }*/
 
     #score-area {
         margin: 0 0 20px 0;
         font-size: 2em;
     }
 
-    #reset-button {
+    #start-button {
         /*color: #fff;*/
         background-color: #000000;
         margin: 20px;
@@ -222,7 +251,7 @@ body {
         margin: 40px;
     }
 
-    .mole-hammer {
+    /*.mole-hammer {
         height: 170px;
         width: 110px;
         background-image: url('assets/mole-hammer.png');
@@ -230,17 +259,17 @@ body {
         position: absolute;
         top: 80px;
         left: 80px;
-    }
+    }*/
 
     #score-area {
         margin: 0 0 20px 0;
         font-size: 2em;
     }
 
-    #reset-button {
+    #start-button {
         /*color: #fff;*/
         background-color: #000000;
-        margin: 20px;
+        margin: 0 20px 20px;
         padding: 10px;
         width: 200px;
         height: 60px;
@@ -276,7 +305,7 @@ body {
         /*padding: 20px;*/
     }
 
-    .mole-hammer {
+    /*.mole-hammer {
         height: 180px;
         width: 120px;
         background-image: url('assets/mole-hammer.png');
@@ -284,14 +313,14 @@ body {
         position: absolute;
         top: 80px;
         left: 80px;
-    }
+    }*/
 
     #score-area {
         margin: 0 0 10px 0;
         font-size: x-large;
     }
 
-    #reset-button {
+    #start-button {
         /*color: #fff;*/
         background-color: #000000;
         margin: 10px;
