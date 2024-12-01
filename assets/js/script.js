@@ -37,12 +37,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Start game function
     function startGame() {
-   
+        score = 0;
+        timeRemaining = gameTime;
+        scoreDisplay.textContent = "00"; // Reset score
+        document.getElementById("timer").textContent = timeRemaining; // Diplay time
+        startButton.disabled = true; // Start button disabled during game
+
+        gameInterval = setInterval(showMole, 1000); // Show mole at 1 second intervals
+        timerInterval = setInterval(updateTimer, 1000); // Start timer
+
+        // Add event listener to mole images for whacking
+        moles.forEach(mole => {
+            mole.addEventListener("click", whackMole);
+        });   
     }
 
     // Function to whack mole
     function whackMole(event) {
-
+        event.target.style.display = "none"; // Hide mole when clicked
+        score++; // Increase score by 1 point
+        scoreDisplay.textContent = score.toString().padStart(2, "0"); // Score update display
     }
 
     // Function to update Timer
