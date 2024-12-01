@@ -55,8 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to whack mole
     function whackMole(event) {
         event.target.style.display = "none"; // Hide mole when clicked
-        score++; // Increase score by 1 point
-        scoreDisplay.textContent = score.toString().padStart(2, "0"); // Score update display
+        
     }
 
     // Function to update Timer
