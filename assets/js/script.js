@@ -25,7 +25,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to make mole pop up in hole
     function showMole() {
-    
+        const hole = randomHole();
+        const mole = hole.querySelector(".mole");
+        mole.style.display = "block";
+
+        // Hide mole after a few seconds
+        setTimeout(() => {
+            mole.style.display = "none";
+        }, Math.random() * 400 + 600);
     }
 
     // Start game function
