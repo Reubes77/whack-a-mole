@@ -65,13 +65,6 @@ body {
     background-color: #9900FF;
 }
 
-/*
-.hole .mole {
-    left: 30%;
-    width: 60%;
-    position: absolute;
-}*/
-
 .mole {
     width: 100%;
     height: auto;
@@ -82,20 +75,14 @@ body {
     display: none;
 }
 
-/*.mole-hammer {
-    height: 120px;
-    width: 70px;
-    background-image: url('assets/mole-hammer.png');
-    background-size: 100%;
-    position: absolute;
-    top: 80px;
-    left: 80px;
-}*/
-
 h2.score-text {
     display: flex;
     justify-content: center;
     margin: 0 0 10px 0;
+}
+
+span#score {
+    margin-left: 5px;
 }
 
 #score-area {
@@ -112,20 +99,6 @@ h2.score-text {
 
 /* Media query: larger and landscape phones (576px and up) */
 @media screen and (min-width: 480px) {
-    body
-    /*{
-        font-family: 'Inter', sans-serif;
-        background-color: #B45F06;
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        overflow: hidden;
-        height: 100%;
-    }
-}*/
-
     .heading {
         display: flex;
         justify-content: center;
@@ -148,23 +121,12 @@ h2.score-text {
         margin: 70px;
     }
 
-    /*.mole-hammer {
-        height: 180px;
-        width: 120px;
-        background-image: url('assets/mole-hammer.png');
-        background-size: 100%;
-        position: absolute;
-        top: 80px;
-        left: 80px;
-    }*/
-
     #score-area {
         margin: 20px;
         font-size: 2em;
     }
 
     #start-button {
-        /*color: #fff;*/
         background-color: #000000;
         margin: 20px;
         padding: 10px;
@@ -175,11 +137,6 @@ h2.score-text {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .heading {
-        /*display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        font-size: 4em;*/
         margin: 30px;
     }
 
@@ -198,23 +155,12 @@ h2.score-text {
         margin: 90px;
     }
 
-    /*.mole-hammer {
-        height: 180px;
-        width: 120px;
-        background-image: url('assets/mole-hammer.png');
-        background-size: 100%;
-        position: absolute;
-        top: 80px;
-        left: 80px;
-    }*/
-
     #score-area {
         margin: 0 0 20px 0;
         font-size: 2em;
     }
 
     #start-button {
-        /*color: #fff;*/
         background-color: #000000;
         margin: 20px;
         padding: 10px;
@@ -228,11 +174,6 @@ h2.score-text {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .heading {
-        /*display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        font-size: 4em;*/
         margin: 10px;
     }
 
@@ -251,23 +192,12 @@ h2.score-text {
         margin: 40px;
     }
 
-    /*.mole-hammer {
-        height: 170px;
-        width: 110px;
-        background-image: url('assets/mole-hammer.png');
-        background-size: 100%;
-        position: absolute;
-        top: 80px;
-        left: 80px;
-    }*/
-
     #score-area {
         margin: 0 0 20px 0;
         font-size: 2em;
     }
 
     #start-button {
-        /*color: #fff;*/
         background-color: #000000;
         margin: 0 20px 20px;
         padding: 10px;
@@ -281,10 +211,6 @@ h2.score-text {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .heading {
-        /*display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;*/
         font-size: 4em;
         margin: 0;
     }
@@ -302,18 +228,7 @@ h2.score-text {
         width: 500px;
         height: 500px;
         margin: 40px;
-        /*padding: 20px;*/
     }
-
-    /*.mole-hammer {
-        height: 180px;
-        width: 120px;
-        background-image: url('assets/mole-hammer.png');
-        background-size: 100%;
-        position: absolute;
-        top: 80px;
-        left: 80px;
-    }*/
 
     #score-area {
         margin: 0 0 10px 0;
@@ -321,10 +236,8 @@ h2.score-text {
     }
 
     #start-button {
-        /*color: #fff;*/
         background-color: #000000;
         margin: 10px;
-        /*padding: 10px;*/
         width: 150px;
         height: 40px;
         font-size: large;
