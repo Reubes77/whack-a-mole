@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to end game
     function endGame() {
-        clearInterval(gameInterval); // Mole stoprs popping up
+        clearInterval(gameInterval); // Mole stops popping up
         clearInterval(timerInterval); // Timer stop
         startButton.disabled = false; // Re-enable start button
 
@@ -93,6 +93,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Attach start game to button
-  
+    startButton.addEventListener("click", function () {
+        console.log("Start button clicked.");
+        endGame(); // Stop current game
+        startGame(); // Start new game
+    });
 });
 
