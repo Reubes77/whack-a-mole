@@ -84,11 +84,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to end game
     function endGame() {
-        
+        clearInterval(gameInterval); // Mole stoprs popping up
+        clearInterval(timerInterval); // Timer stop
+        startButton.disabled = false; // Re-enable start button
+
+        console.log(`Game Over! Your final score is: ${score}`);
+        alert(`Game Over! Your final score is: ${score}`);        
     }
 
     // Attach start game to button
   
 });
 
-console.log(index)
