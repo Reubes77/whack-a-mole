@@ -70,10 +70,17 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to update Timer
     function updateTimer() {
         timeRemaining--;
-        document.getElementById("timer").textContent = timeRemaining;
+        const timerElement = document.getElementById("timer");
+
+        // Update timer display
+        timerElement.textContent = timeRemaining;
         
+        // Change color of timer when timer is 5 seconds or less
         if (timeRemaining <= 5) {
             console.log(`Hurry up! Only ${timeRemaining} seconds left!`);
+            timerElement.style.color = "crimson";
+        } else {
+            timerElement.style.color = ""; // Reset to default color
         }
 
         if (timeRemaining <=0) {
@@ -81,6 +88,13 @@ document.addEventListener("DOMContentLoaded", function () {
             endGame(); // Game ends when timer reaches zero
         } 
     }
+
+    // Attach start game to button
+    startButton.addEventListener("click", function () {
+        console.log("Start button clicked.");
+        endGame(); // Stop current game
+        startGame(); // Start new game
+    });
 
     // Function to end game
     function endGame() {
@@ -91,12 +105,4 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(`Game Over! Your final score is: ${score}`);
         alert(`Game Over! Your final score is: ${score}`);        
     }
-
-    // Attach start game to button
-    startButton.addEventListener("click", function () {
-        console.log("Start button clicked.");
-        endGame(); // Stop current game
-        startGame(); // Start new game
-    });
 });
-
