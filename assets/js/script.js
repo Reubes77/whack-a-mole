@@ -46,17 +46,23 @@ document.addEventListener("DOMContentLoaded", function () {
         score = 0;
         timeRemaining = gameTime;
         scoreDisplay.textContent = "00"; // Reset score
-        document.getElementById("timer").textContent = timeRemaining; // Diplay time
-        startButton.disabled = true; // Start button disabled during game
-
+        document.getElementById("timer").textContent = timeRemaining; // Display initial time
+        startButton.disabled = true; // Disable the start button during the game
+        
         console.log("Game started!");
-        gameInterval = setInterval(showMole, 1000); // Show mole at 1 second intervals
+        
+        gameInterval = setInterval(() => {
+            if (timeRemaining > 0) {
+                showMole();
+            } else {
+                clearInterval(gameInterval);
+            }
+        }, 1000); // Mole appears every second
+
         timerInterval = setInterval(updateTimer, 1000); // Start timer
 
-        // Add event listener to mole images for whacking
-        moles.forEach(mole => {
-            mole.addEventListener("click", whackMole);
-        });   
+        // Attach whack event listener to all moles
+        moles.forEach(mole => mole.addEventListener("click", whackMole));
     }
 
     // Function to whack mole
@@ -83,10 +89,37 @@ document.addEventListener("DOMContentLoaded", function () {
             timerElement.style.color = ""; // Reset to default color
         }
 
-        if (timeRemaining <=0) {
+        if (timeRemaining <= 0) {
             console.log("Time's Up!");
             endGame(); // Game ends when timer reaches zero
         } 
+    }
+
+    // Function to end game
+    function endGame() {
+        clearInterval(gameInterval); // Mole stops popping up
+        clearInterval(timerInterval); // Timer stop
+        startButton.disabled = false; // Re-enable start button
+
+        // Check if current score is higher than hihgest score stored in LocalStorage
+        let highestScore = parseInt(localStorage.getItem("highestScore")) || 0;
+
+        if (score > highestScore) {
+            localStorage.setItem("highestScore", score); // Save new high score
+            alert(`Game Over! New High Score: ${score}`);
+        } else {
+            console.log(`Game Over! Your final score is: ${score}`);
+            alert(`Game Over! Your final score is: ${score}`); 
+        }
+
+        // Update displayed high score
+        displayHighScore();        
+    }
+
+    // Function display highest score
+    function displayHighScore() {
+        const highScore = parseInt(localStorage.getItem("highestScore")) || 0;
+        document.getElementById("high-score").textContent = highScore;
     }
 
     // Attach start game to button
@@ -96,13 +129,6 @@ document.addEventListener("DOMContentLoaded", function () {
         startGame(); // Start new game
     });
 
-    // Function to end game
-    function endGame() {
-        clearInterval(gameInterval); // Mole stops popping up
-        clearInterval(timerInterval); // Timer stop
-        startButton.disabled = false; // Re-enable start button
-
-        console.log(`Game Over! Your final score is: ${score}`);
-        alert(`Game Over! Your final score is: ${score}`);        
-    }
+    // Display high score when page loads
+    displayHighScore();
 });
