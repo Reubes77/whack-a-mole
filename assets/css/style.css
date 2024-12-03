@@ -149,7 +149,6 @@ span#high-score {
 
     #start-button {
         background-color: #000000;
-        margin: 20px;
         padding: 10px;
         width: 100px;
         height: 30px;
@@ -238,7 +237,8 @@ span#high-score {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .heading {
-        margin: 10px;
+        margin: 10px 0 0 0;
+        font-size: xxx-large;
     }
 
     .sub-text {
@@ -257,22 +257,37 @@ span#high-score {
     }
 
     #score-area {
-        margin: 0 0 20px 0;
+        margin: 0 0 10px 0;
         font-size: 2em;
+    }
+
+    h2.score-text {
+        display: flex;
+        justify-content: center;
+        margin: 0 0 10px 0;
+        font-size: xx-large;
+    }
+
+    p.timer-text {
+        font-size: x-large;
+    }
+
+    h5.high-score-text {
+        font-size: large;
     }
 
     #start-button {
         background-color: #000000;
         margin: 0 20px 20px;
         padding: 10px;
-        width: 200px;
-        height: 60px;
-        font-size: x-large;
+        width: 150px;
+        height: 50px;
+        font-size: large;
         border-radius: 10px;
     }
   } 
 
-/* Large devices (laptops/desktops, 992px and up) */
+/* Large devices (laptops/desktops, 992px and up)
 @media only screen and (min-width: 992px) {
     .heading {
         font-size: 4em;
@@ -285,9 +300,9 @@ span#high-score {
     }
 
     .game-arena {
-        display: grid;
+        /*display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);*/
         gap: 40px;
         width: 500px;
         height: 500px;
@@ -307,17 +322,17 @@ span#high-score {
         font-size: large;
         border-radius: 10px;
     }
-  }
+  } */
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     .heading {
         font-size: 3em;
-        margin: 10px 0 0 0;
+        margin: 20px 0 0 0;
     }
 
     .sub-text {
-        font-size: x-large;
+        font-size: xx-large;
         margin: 0;
     }
 
@@ -325,10 +340,10 @@ span#high-score {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        gap: 30px;
-        width: 400px;
-        height: 400px;
-        margin: 30px;
+        gap: 40px;
+        width: 500px;
+        height: 500px;
+        margin: 40px;
     }
 
     #score-area {
@@ -336,12 +351,16 @@ span#high-score {
         font-size: large;
     }
 
+    h5.high-score-text {
+        font-size: x-large;
+    }
+
     #start-button {
         background-color: #000000;
-        margin: 10px;
-        width: 150px;
-        height: 40px;
-        font-size: large;
+        margin: 5px 0 10px 0;
+        width: 200px;
+        height: 50px;
+        font-size: x-large;
         border-radius: 10px;
     }
   }
