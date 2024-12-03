@@ -97,6 +97,55 @@ span#score {
     border-radius: 10px;
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0 10px 0;
+        font-size: 25px;
+    }
+
+    .mole-logo {
+        margin: 0 10px 0 0;
+        width: 15%;
+    }
+
+    .sub-text {
+        font-size: 17px;
+        margin: 0 0 15px 0;
+    }
+
+    .game-arena {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+        width: 220px;
+        height: 220px;
+        margin: 10px;
+    }
+
+    #score-area {
+        margin: 5px 10px 0;
+        font-size: 80%;
+    }
+
+    #start-button {
+        background-color: #000000;
+        margin: 20px;
+        padding: 10px;
+        width: 100px;
+        height: 30px;
+        font-size: small;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 /* Media query: larger and landscape phones (576px and up) */
 @media screen and (min-width: 480px) {
     .heading {
@@ -243,4 +292,41 @@ span#score {
         font-size: large;
         border-radius: 10px;
     }
-  } 
+  }
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .heading {
+        font-size: 3em;
+        margin: 10px 0 0 0;
+    }
+
+    .sub-text {
+        font-size: x-large;
+        margin: 0;
+    }
+
+    .game-arena {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 30px;
+        width: 400px;
+        height: 400px;
+        margin: 30px;
+    }
+
+    #score-area {
+        margin: 0 0 10px 0;
+        font-size: large;
+    }
+
+    #start-button {
+        background-color: #000000;
+        margin: 10px;
+        width: 150px;
+        height: 40px;
+        font-size: large;
+        border-radius: 10px;
+    }
+  }
