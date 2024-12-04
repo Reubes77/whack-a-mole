@@ -90,7 +90,7 @@ This allows users to start a new game.
     * Styling.
 
   - Javascript
-    * Interactive.
+    * Running functions for interactive components.
 
 ----
 

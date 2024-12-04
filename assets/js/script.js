@@ -1,16 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const holes = document.querySelectorAll(".hole"); // Select all holes  
-    const moles = document.querySelectorAll(".mole"); // Select all moles
+    const holes = document.querySelectorAll(".hole"); // Select all holes
     const scoreDisplay = document.getElementById("score"); // Displays score
+    const highScoreDisplay = document.getElementById("high-score"); // High score display
+    const timerDisplay = document.getElementById("timer"); // Timer display
     const startButton = document.getElementById("start-button"); // Start button
+    const messageElement = document.getElementById("game-over-message"); // Game over message
     let score = 0;
     let lastHole;
     let gameInterval;
-    let timerInterval;
     let gameTime = 30; // 30 second game duration
-    let timeRemaining = gameTime;
+    let timeRemaining;
 
     console.log("Game initialized. Ready to start!");
+
+    // Display high score when page loads
+    displayHighScore();
 
     // Random select hole function
     function randomHole() {
@@ -18,13 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const selectedHole = holes[index];
         console.log(`Selected hole index: ${index}`);
 
-        // Prevent same hole being selected consecutively
+        // Prevent the same hole from being selected consecutively
         if (selectedHole === lastHole) {
             console.log("Same hole selected again. Choosing a different hole.");
             return randomHole();
         }
         lastHole = selectedHole;
-        return selectedHole;      
+        return selectedHole;
     }
 
     // Function to make mole pop up in hole
@@ -46,89 +50,75 @@ document.addEventListener("DOMContentLoaded", function () {
         score = 0;
         timeRemaining = gameTime;
         scoreDisplay.textContent = "00"; // Reset score
-        document.getElementById("timer").textContent = timeRemaining; // Display initial time
+        timerDisplay.textContent = timeRemaining; // Reset timer
+        messageElement.style.display = "none"; // Hide game over message
         startButton.disabled = true; // Disable the start button during the game
-        
+
         console.log("Game started!");
-        
-        gameInterval = setInterval(() => {
-            if (timeRemaining > 0) {
-                showMole();
-            } else {
-                clearInterval(gameInterval);
-            }
-        }, 1000); // Mole appears every second
 
-        timerInterval = setInterval(updateTimer, 1000); // Start timer
+        gameInterval = setInterval(showMole, 1000); // Show mole continuously
+        const timerInterval = setInterval(updateTimer, 1000); // Start timer
 
-        // Attach whack event listener to all moles
-        moles.forEach(mole => mole.addEventListener("click", whackMole));
+        // Stop game after time runs out
+        setTimeout(() => {
+            clearInterval(gameInterval); // Stop mole popping up
+            clearInterval(timerInterval); // Stop timer
+            endGame(); // End game
+        }, gameTime * 1000);
     }
 
     // Function to whack mole
-    function whackMole(event) {
-        event.target.style.display = "none"; // Hide mole when clicked
-        score++; // Increase score by 1 point
-        scoreDisplay.textContent = score.toString().padStart(2, "0"); // Score update display
-        console.log(`Mole whacked! Current score: ${score}`);
-    }
+    holes.forEach(hole => {
+        const mole = hole.querySelector(".mole");
+        mole.addEventListener("click", function () {
+            mole.style.display = "none"; // Hide the mole when clicked
+            score++; // Increase score
+            scoreDisplay.textContent = score.toString().padStart(2, "0"); // Update score display
+        });
+    });
 
     // Function to update Timer
     function updateTimer() {
         timeRemaining--;
-        const timerElement = document.getElementById("timer");
+        timerDisplay.textContent = timeRemaining;
 
-        // Update timer display
-        timerElement.textContent = timeRemaining;
-        
         // Change color of timer when timer is 5 seconds or less
         if (timeRemaining <= 5) {
             console.log(`Hurry up! Only ${timeRemaining} seconds left!`);
-            timerElement.style.color = "crimson";
+            timerDisplay.style.color = "crimson";
         } else {
-            timerElement.style.color = ""; // Reset to default color
+            timerDisplay.style.color = ""; // Reset to default color
         }
-
-        if (timeRemaining <= 0) {
-            console.log("Time's Up!");
-            endGame(); // Game ends when timer reaches zero
-        } 
     }
 
     // Function to end game
     function endGame() {
-        clearInterval(gameInterval); // Mole stops popping up
-        clearInterval(timerInterval); // Timer stop
         startButton.disabled = false; // Re-enable start button
 
-        // Check if current score is higher than hihgest score stored in LocalStorage
+        // Check if current score is higher than the highest score stored in LocalStorage
         let highestScore = parseInt(localStorage.getItem("highestScore")) || 0;
 
         if (score > highestScore) {
             localStorage.setItem("highestScore", score); // Save new high score
-            alert(`Game Over! New High Score: ${score}`);
+            messageElement.textContent = `🎉 Game Over! New High Score: ${score}`;
         } else {
             console.log(`Game Over! Your final score is: ${score}`);
-            alert(`Game Over! Your final score is: ${score}`); 
+            messageElement.textContent = `Game Over! Your final score is: ${score}`;
         }
 
-        // Update displayed high score
-        displayHighScore();        
+        messageElement.style.display = "block"; // Show game over message
+        displayHighScore(); // Update displayed high score
     }
 
-    // Function display highest score
+    // Function to display the highest score
     function displayHighScore() {
         const highScore = parseInt(localStorage.getItem("highestScore")) || 0;
-        document.getElementById("high-score").textContent = highScore;
+        highScoreDisplay.textContent = highScore.toString().padStart(2, "0");
     }
 
     // Attach start game to button
     startButton.addEventListener("click", function () {
         console.log("Start button clicked.");
-        endGame(); // Stop current game
         startGame(); // Start new game
     });
-
-    // Display high score when page loads
-    displayHighScore();
 });

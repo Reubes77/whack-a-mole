@@ -17,7 +17,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    overflow: hidden;
+    /*max-height: 100vh;*/
     height: 100%;
 }
 
@@ -97,7 +97,7 @@ h5.high-score-text {
 }
 
 span#high-score {
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 #timer {
@@ -128,8 +128,8 @@ span#high-score {
     }
 
     .sub-text {
-        font-size: 17px;
-        margin: 0 0 15px 0;
+        font-size: x-small;
+        margin: 0 40px 15px 40px;
     }
 
     .game-arena {
@@ -150,9 +150,9 @@ span#high-score {
     #start-button {
         background-color: #000000;
         padding: 10px;
-        width: 100px;
-        height: 30px;
-        font-size: small;
+        width: 75px;
+        height: 20px;
+        font-size: xx-small;
         border-radius: 5px;
         display: flex;
         justify-content: center;
@@ -242,8 +242,9 @@ span#high-score {
     }
 
     .sub-text {
-        font-size: 2em;
-        margin: 0;
+        font-size: large;
+        margin: 0 60px;
+        padding: 0 30px;
     }
 
     .game-arena {
@@ -287,9 +288,9 @@ span#high-score {
     }
   } 
 
-/* Large devices (laptops/desktops, 992px and up)
+/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .heading {
+    /*.heading {
         font-size: 4em;
         margin: 0;
     }
@@ -297,7 +298,7 @@ span#high-score {
     .sub-text {
         font-size: x-large;
         margin: 0;
-    }
+    }*/
 
     .game-arena {
         /*display: grid;
@@ -322,18 +323,23 @@ span#high-score {
         font-size: large;
         border-radius: 10px;
     }
-  } */
+  }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     .heading {
         font-size: 3em;
-        margin: 20px 0 0 0;
+        margin: 10px 0 0 0;
+    }
+
+    .mole-logo {
+        margin: 0 20px 0 0;
     }
 
     .sub-text {
-        font-size: xx-large;
-        margin: 0;
+        font-size: x-large;
+        max-width: 100vh;
+        padding: 0 90px;
     }
 
     .game-arena {
@@ -352,7 +358,7 @@ span#high-score {
     }
 
     h5.high-score-text {
-        font-size: x-large;
+        font-size: large;
     }
 
     #start-button {
