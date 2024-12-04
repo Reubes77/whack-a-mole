@@ -20,11 +20,13 @@ This is the inspiration for my idea for project 2. I wanted to create a game tha
 
 ### Color scheme
 
-This game is meant to be fun and I wanted a color that best represents that essence and I chose to use the color Orange. The second colour to complement and contrast against the Orange is White as it also allows for easy readibility. Below is a breakdown of the colors and their usage.
+This game is meant to be fun and I wanted a color that best represents that essence and I chose to use the color Orange. The second colour to complement and contrast against the Orange is White as it also allows for easy readibility. Below is a breakdown of the colors and their usage. An accent color of Dark Grey which represents mystery and is used to compliment the design and used minimally.
 
-  - #b45f06 used as background color.
+  - #b45f06 (Orange) used as background color.
 
-  - #ffffff used for headlines and primary text, background color for fees and contact page.
+  - #ffffff (White) used for all text.
+
+  - #333333 (Dark Grey) used for the holes.
 
 ![Color palette](assets/images/color-palette.webp) 
 
@@ -106,7 +108,9 @@ Manual testing:
 
 ### Fixed bugs:
 
+ - The alert message "Game Over! Yout final score is 00." popped up before the game started. This was fixed by changing the message to feedback on the game-arena screen above the score area.
 
+  - Syntax Error: The line messageElement.style.display = "block"; Show game over message did not contain the //.
 
 ### Unfixed bugs:
 
