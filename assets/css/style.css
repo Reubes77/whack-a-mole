@@ -75,6 +75,11 @@ body {
     display: none;
 }
 
+#game-over-message {
+    font-size: small;
+    margin: 15px 0 5px;
+}
+
 h2.score-text {
     display: flex;
     justify-content: center;
@@ -87,6 +92,16 @@ span#score {
 
 #score-area {
     margin: 0 20px 20px 20px;
+}
+
+#level {
+    font-size: x-small;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    font-weight: bold;
 }
 
 h5.high-score-text {
@@ -216,6 +231,10 @@ span#high-score {
         width: 700px;
         height: 700px;
         margin: 90px;
+        /*gap: 70px;
+        width: 500px;
+        height: 500px;
+        margin: 70px;*/
     }
 
     #score-area {
@@ -257,8 +276,13 @@ span#high-score {
         margin: 40px;
     }
 
+    #game-over-message {
+        font-size: larger;
+        margin-bottom: 15px;
+    }
+
     #score-area {
-        margin: 15px 0 10px 0;
+        margin: 0 0 10px 0;
         font-size: 2em;
     }
 
@@ -271,6 +295,16 @@ span#high-score {
 
     p.timer-text {
         font-size: x-large;
+    }
+
+    #level {
+        font-size: large;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000000;
+        font-weight: bold;
     }
 
     h5.high-score-text {
@@ -290,20 +324,7 @@ span#high-score {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    /*.heading {
-        font-size: 4em;
-        margin: 0;
-    }
-
-    .sub-text {
-        font-size: x-large;
-        margin: 0;
-    }*/
-
     .game-arena {
-        /*display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);*/
         gap: 40px;
         width: 500px;
         height: 500px;
@@ -350,9 +371,24 @@ span#high-score {
         margin: 30px;
     }
 
+    #game-over-message {
+        font-size: larger;
+        margin-bottom: 15px;
+    }
+
     #score-area {
         margin: 0 0 10px 0;
         font-size: large;
+    }
+
+    #level {
+        font-size: large;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000000;
+        font-weight: bold;
     }
 
     h5.high-score-text {

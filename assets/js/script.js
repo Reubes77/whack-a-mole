@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const levelDisplay = document.getElementById("level") // Displays level
     let score = 0;
     let gameInterval;
-    let gameTime = 30; // 30 second game duration
+    let gameTime = 3; // 30 second game duration
     let timeRemaining;
     let currentLevel = 1; // Start at level 1
     let moleSpeed = 1000; // Initial mole speed
