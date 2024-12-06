@@ -6,9 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const startButton = document.getElementById("start-button"); // Start button
     const messageElement = document.getElementById("game-over-message"); // Game over message
     let score = 0;
-    let lastHole;
     let gameInterval;
-    let gameTime = 30; // 30 second game duration
+    let gameTime = 10; // 30 second game duration
     let timeRemaining;
 
     console.log("Game initialized. Ready to start!");
@@ -21,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const index = Math.floor(Math.random() * holes.length);
         const selectedHole = holes[index];
         console.log(`Selected hole index: ${index}`);
+        let lastHole;
 
         // Prevent the same hole from being selected consecutively
         if (selectedHole === lastHole) {
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (score > highestScore) {
             localStorage.setItem("highestScore", score); // Save new high score
-            messageElement.textContent = `🎉 Game Over! New High Score: ${score}`;
+            messageElement.textContent = `Game Over! New High Score: ${score}`;
         } else {
             console.log(`Game Over! Your final score is: ${score}`);
             messageElement.textContent = `Game Over! Your final score is: ${score}`;

@@ -22,7 +22,7 @@ This is the inspiration for my idea for project 2. I wanted to create a game tha
 
 This game is meant to be fun and I wanted a color that best represents that essence and I chose to use the color Orange. The second colour to complement and contrast against the Orange is White as it also allows for easy readibility. Below is a breakdown of the colors and their usage. An accent color of Dark Grey which represents mystery and is used to compliment the design and used minimally.
 
-  - #b45f06 (Orange) used as background color.
+  - #f96d00 (Orange) used as background color.
 
   - #ffffff (White) used for all text.
 
@@ -40,13 +40,21 @@ This game is meant to be fun and I wanted a color that best represents that esse
 
   * Font Awesome icon was used for the tab icon in the browser.
 
-### Wireframe created on Balsamiq:
+### Website wireframe (created on Balsamiq):
 
 Before I started designing the website, I went to the drawing board to map out the design structure. 
 I used Balsamiq to create a wireframe of the website.
 
-![Responsiveness](assets/images/wireframe.webp) 
+![Responsiveness](assets/images/wireframe.webp)
 
+### Game function wireframe:
+
+Before I started designing the website, I went to the drawing board to map out the design structure. 
+I used Balsamiq to create a wireframe of the website.
+
+![Responsiveness](assets/images/game-wireframe.webp) 
+
+----
 
 ## Features
 
@@ -70,11 +78,32 @@ A paragraph gives the user instruction on the method in which to play the game.
 
 The game arena is the dedicated area which consists of circles which represents holes through which the mole appears and disappears.
 
+
 ### Score Area
+
+#### Feedback message:
+
+![Responsiveness](assets/images/feedback-message.webp) 
+
+Needs copy.
+
+#### Score:
 
 ![Responsiveness](assets/images/score-area.webp) 
 
 The game area contains the score (shows the user's score after completing game), the timer (counts down the time for user to complete the game) and high score (shows the user the high score to beat).
+
+#### Timer:
+
+![Responsiveness](assets/images/timer.webp) 
+
+Needs copy.
+
+#### High Score:
+
+![Responsiveness](assets/images/high-score.webp) 
+
+Needs copy.
 
 ## Start button
 
