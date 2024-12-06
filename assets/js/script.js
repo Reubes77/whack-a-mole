@@ -5,15 +5,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const timerDisplay = document.getElementById("timer"); // Timer display
     const startButton = document.getElementById("start-button"); // Start button
     const messageElement = document.getElementById("game-over-message"); // Game over message
+    const levelDisplay = document.getElementById("level") // Displays level
     let score = 0;
     let gameInterval;
     let gameTime = 30; // 30 second game duration
     let timeRemaining;
+    let currentLevel = 1; // Start at level 1
+    let moleSpeed = 1000; // Initial mole speed
 
     console.log("Game initialized. Ready to start!");
 
-    // Display high score when page loads
+    // Display high score and level when page loads
     displayHighScore();
+    updateLevelDisplay();
 
     // Random select hole function
     function randomHole() {
@@ -49,14 +53,20 @@ document.addEventListener("DOMContentLoaded", function () {
     function startGame() {
         score = 0;
         timeRemaining = gameTime;
+        currentLevel = 1; // Reset to level 1
+        moleSpeed = 1000; // Reset speed of mole
         scoreDisplay.textContent = "00"; // Reset score
         timerDisplay.textContent = timeRemaining; // Reset timer
         messageElement.style.display = "none"; // Hide game over message
         startButton.disabled = true; // Disable the start button during the game
+        updateLevelDisplay();
 
         console.log("Game started!");
 
-        gameInterval = setInterval(showMole, 1000); // Show mole continuously
+        gameInterval = setInterval(() => {
+            showMole(); // Show mole continuously
+        }, moleSpeed); 
+
         const timerInterval = setInterval(updateTimer, 1000); // Start timer
 
         // Stop game after time runs out
@@ -74,8 +84,23 @@ document.addEventListener("DOMContentLoaded", function () {
             mole.style.display = "none"; // Hide the mole when clicked
             score++; // Increase score
             scoreDisplay.textContent = score.toString().padStart(2, "0"); // Update score display
+
+            // Difficulty increase after every 10 points
+            if (score % 10 === 0) {
+                increaseDifficulty();
+            }
         });
     });
+
+    // Function to increase difficulty
+    function increaseDifficulty() {
+        currentLevel++;
+        moleSpeed = Math.max(300, moleSpeed - 100); // Decrease speed of mole
+        clearInterval(gameInterval); // Clear current interval
+        gameInterval = setInterval(showMole, moleSpeed); // Start new interval with updated speed
+        updateLevelDisplay();
+        console.log(`Level Up! Current level ${currentLevel}. Mole speed: ${moleSpeed}ms`);
+    }
 
     // Function to update Timer
     function updateTimer() {
@@ -114,6 +139,11 @@ document.addEventListener("DOMContentLoaded", function () {
     function displayHighScore() {
         const highScore = parseInt(localStorage.getItem("highestScore")) || 0;
         highScoreDisplay.textContent = highScore.toString().padStart(2, "0");
+    }
+
+    // Function to update Level Display
+    function updateLevelDisplay() {
+        levelDisplay.textContent = `Level: ${currentLevel}`;
     }
 
     // Attach start game to button

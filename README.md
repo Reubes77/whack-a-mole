@@ -131,23 +131,25 @@ Manual testing:
 
   - CSS - media queries tested to see responsiveness and picked up issues on screens with min-width (600px and down - 1200px and up). These issues were resolved through Chrome Devtools as well as checking responsiveness on Am I Responsive website.
 
+> [!NOTE]  
+> For all testing, please refer to the [TESTING.md](TESTING.md) file.
+
 ----
 
 ## Bugs
 
 ### Fixed bugs:
 
+ - The alert message popped up with clicking the start game button. The bug was fixed by deleting the eventListener for endGame(); in the // Attach start game to button.
+
  - The alert message "Game Over! Yout final score is 00." popped up before the game started. This was fixed by changing the message to feedback on the game-arena screen above the score area.
 
-  - Syntax Error: The line messageElement.style.display = "block"; Show game over message did not contain the //.
+  - Syntax Error: The line messageElement.style.display = "block"; Show game over message did not contain the //. Fixed issue with add // in front of the description.
+
+  - Moles stopped popping up after a Level to Display difficulty function and a function to update Level Display was included to add a challenge for users playing this game. The fix was to declare the const levelDisplay = document.getElementById("level"). This allowed the moles to pop up as expected.
+
 
 ### Unfixed bugs:
-
-
-
-## Validator testing
-
-Add grid
 
 
 ----
@@ -173,12 +175,19 @@ The live link can be found [here:](https://reubes77.github.io/whack-a-mole/)
 
 ### Content
 
-1. The code to make timer color change when reaching 5 seconds:
+1.  Resource for checking how to write code syntax and functions for creating the code to make game work:
 
+    - [MDN] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+
+    - [w3schools] (https://www.w3schools.com/js/default.asp)
+
+2. The code to make timer color change when reaching 5 seconds:
+    
     - [Stack Overflow] (https://stackoverflow.com/questions/31298941/anyway-possible-to-make-a-countdown-timer-change-color-at-an-certain-time-with-j/31299299)
 
     - [Dev Drawer] (https://www.youtube.com/watch?v=WGekurbM1Hg)
 
+3.  My mentor Rory Sheridan for his advice and guidance on how to debug the code, create a feedback message on the page instead of an alert message and add a level of difficulty to the game.
 
 ### Media
 
