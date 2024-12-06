@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const messageElement = document.getElementById("game-over-message"); // Game over message
     let score = 0;
     let gameInterval;
-    let gameTime = 10; // 30 second game duration
+    let gameTime = 30; // 30 second game duration
     let timeRemaining;
 
     console.log("Game initialized. Ready to start!");
