@@ -2,6 +2,8 @@
 
 This is a classic game which allow the user to test their eye and hand coordination skills. The game is intended for all demographics (ages 5-80 years) as it is fully intuitive, fun and easy to navigate and play. The webiste is fully responsive and shows how javascript is used to create an interactive game experience.
 
+The aim of the game is to whack as many moles as it pops up in the holes within the 30 seconds of the game time. If the user achieves the highest score, a feedback message appears above the score section to indicate this, otherwise the message indicates the final score. An added challenge to the game play for user's is that the mole speeds up after the score reaches 10 points, thus added 3 levels to the game play. The user can play the game again by clikcing on the start button and the game resets and the score starts at zero.
+
 ![Responsiveness](assets/images/amiresponsive.webp) 
 
 [You can view this website here](https://reubes77.github.io/whack-a-mole/)
