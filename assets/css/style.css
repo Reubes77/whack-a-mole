@@ -11,7 +11,7 @@
 /* General page styles */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f96d00;
+    background-color: #B45F06;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -22,7 +22,8 @@ body {
 }
 
 .mole-logo {
-    margin: 10px 10px 0 0;
+    margin: 0 15px 0 0;
+    width: 10%;
 }
 
 .heading {
@@ -95,7 +96,7 @@ span#score {
 }
 
 #level {
-    font-size: x-small;
+    font-size: small;
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
@@ -104,11 +105,12 @@ span#score {
     font-weight: bold;
 }
 
-h5.high-score-text {
+h3.high-score-text {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px;
+    font-size: small;
 }
 
 span#high-score {
@@ -139,7 +141,7 @@ span#high-score {
 
     .mole-logo {
         margin: 0 10px 0 0;
-        width: 15%;
+        width: 10%;
     }
 
     .sub-text {
@@ -152,8 +154,8 @@ span#high-score {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
         gap: 10px;
-        width: 220px;
-        height: 220px;
+        width: 200px;
+        height: 200px;
         margin: 10px;
     }
 
@@ -165,9 +167,9 @@ span#high-score {
     #start-button {
         background-color: #000000;
         padding: 10px;
-        width: 75px;
-        height: 20px;
-        font-size: xx-small;
+        width: 100px;
+        height: 25px;
+        font-size: small;
         border-radius: 5px;
         display: flex;
         justify-content: center;
@@ -271,14 +273,14 @@ span#high-score {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
         gap: 40px;
-        width: 550px;
-        height: 550px;
+        width: 450px;
+        height: 450px;
         margin: 40px;
     }
 
     #game-over-message {
         font-size: larger;
-        margin-bottom: 15px;
+        margin: 0 0 15px 0;
     }
 
     #score-area {
@@ -307,8 +309,9 @@ span#high-score {
         font-weight: bold;
     }
 
-    h5.high-score-text {
+    h3.high-score-text {
         font-size: large;
+        margin: 15px;
     }
 
     #start-button {
@@ -391,7 +394,7 @@ span#high-score {
         font-weight: bold;
     }
 
-    h5.high-score-text {
+    h3.high-score-text {
         font-size: large;
     }
 

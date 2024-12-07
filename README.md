@@ -85,7 +85,7 @@ The game arena is the dedicated area which consists of circles which represents 
 
 ![Responsiveness](assets/images/feedback-message.webp) 
 
-Needs copy.
+Indicates that the game is over and shows the user's their final score with the message - "Game Over! Your final score is:". If the user scored higher than the high score, then the message shows "Game Over! New High Score:".
 
 #### Score:
 
@@ -97,13 +97,13 @@ The game area contains the score (shows the user's score after completing game),
 
 ![Responsiveness](assets/images/timer.webp) 
 
-Needs copy.
+The timer counts down the time from 30 seconds in which the user needs to whack as many moles as they can. Once the timer reaches 5 seconds, the color will change to crimson to indicate that time is almost up.
 
 #### High Score:
 
 ![Responsiveness](assets/images/high-score.webp) 
 
-Needs copy.
+Indicates the user's highest score and records it to the local storage.
 
 ## Start button
 
@@ -147,6 +147,8 @@ Manual testing:
   - Syntax Error: The line messageElement.style.display = "block"; Show game over message did not contain the //. Fixed issue with add // in front of the description.
 
   - Moles stopped popping up after a Level to Display difficulty function and a function to update Level Display was included to add a challenge for users playing this game. The fix was to declare the const levelDisplay = document.getElementById("level"). This allowed the moles to pop up as expected.
+
+  - Bug occured where the score did not reflect the "Game Over" message. Once the time ran out, a mole popped up again which was an error, and if the user mistakenly clicked on it, then the scores were different. 
 
 
 ### Unfixed bugs:
