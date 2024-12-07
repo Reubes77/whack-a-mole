@@ -22,7 +22,7 @@ This is the inspiration for my idea for project 2. I wanted to create a game tha
 
 This game is meant to be fun and I wanted a color that best represents that essence and I chose to use the color Orange. The second colour to complement and contrast against the Orange is White as it also allows for easy readibility. Below is a breakdown of the colors and their usage. An accent color of Dark Grey which represents mystery and is used to compliment the design and used minimally.
 
-  - #f96d00 (Orange) used as background color.
+  - #B45F06 (Orange) used as background color.
 
   - #ffffff (White) used for all text.
 
@@ -66,19 +66,21 @@ The project consists of basic functions to operate and include the following:
 
 The header consists of the logo which depicts our mole and the name of the game, Whack A Mole!
 
+----
 ### Instruction
 
 ![Responsiveness](assets/images/instruction.webp) 
 
 A paragraph gives the user instruction on the method in which to play the game.
 
+----
 ### Game Arena
 
 ![Responsiveness](assets/images/game-arena.webp) 
 
 The game arena is the dedicated area which consists of circles which represents holes through which the mole appears and disappears.
 
-
+----
 ### Score Area
 
 #### Feedback message:
@@ -87,19 +89,22 @@ The game arena is the dedicated area which consists of circles which represents 
 
 Indicates that the game is over and shows the user's their final score with the message - "Game Over! Your final score is:". If the user scored higher than the high score, then the message shows "Game Over! New High Score:".
 
-#### Score:
+----
+### Score:
 
 ![Responsiveness](assets/images/score-area.webp) 
 
 The game area contains the score (shows the user's score after completing game), the timer (counts down the time for user to complete the game) and high score (shows the user the high score to beat).
 
-#### Timer:
+----
+### Timer:
 
 ![Responsiveness](assets/images/timer.webp) 
 
 The timer counts down the time from 30 seconds in which the user needs to whack as many moles as they can. Once the timer reaches 5 seconds, the color will change to crimson to indicate that time is almost up.
 
-#### High Score:
+----
+### High Score:
 
 ![Responsiveness](assets/images/high-score.webp) 
 
@@ -111,6 +116,7 @@ Indicates the user's highest score and records it to the local storage.
 
 This allows users to start a new game.
 
+----
 
 ## Technologies used:
 
