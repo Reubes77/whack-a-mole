@@ -34,10 +34,10 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
-| Browser| Home | Notes |  
+| Browser | Home | Notes |  |
 | --- | --- | --- | --- | 
 | Chrome | ![screenshot](assets/images/chrome-home-page.webp) | Works as expected |
-| FireFox | ![screenshot](assets/images/firefox-home-page.webp) | Works as expected |
+| Firefox | ![screenshot](assets/images/firefox-home-page.webp) | Works as expected |
 | Safari | ![screenshot](assets/images/safari-home-page.webp) | Works as expected |
 
 ## Lighthouse Audit
@@ -52,8 +52,8 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 I've tested my deployed project for responsiveness issues.
 
-| Device| Home | Notes |  
+| Device | Home | Notes |  |
 | --- | --- | --- | --- | 
-| Mobile (DevTools) | ![screenshot](assets/images/mobile-responsive.webp) |  Works as expected |
-| Tablet (DevTools) | ![screenshot](assets/images/tablet-responsive.webp) |  Works as expected |
-| Desktop | ![screenshot](assets/images/chrome-home-page.webp) | Works as expected |
+| Mobile (DevTools) | ![screenshot](assets/images/mobile-responsive.png) | Works as expected | 
+| Tablet (DevTools) | ![screenshot](assets/images/tablet-responsive.png) | Works as expected |
+| Desktop (DevTools) | ![screenshot](assets/images/desktop-responsive.png) | Works as expected |
