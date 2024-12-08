@@ -1,8 +1,8 @@
 # Whack-A-Mole
 
-This is a classic game which allow the user to test their eye and hand coordination skills. The game is intended for all demographics (ages 5-80 years) as it is fully intuitive, fun and easy to navigate and play. The webiste is fully responsive and shows how javascript is used to create an interactive game experience.
+This is a classic game which allow the user to test their eye and hand coordination skills. The game is intended for all demographics (ages 5-80 years) as it is fun and easy to navigate and play. The webiste is fully responsive and shows how javascript is used to create an interactive game experience.
 
-The aim of the game is to whack as many moles as it pops up in the holes within the 30 seconds of the game time. If the user achieves the highest score, a feedback message appears above the score section to indicate this, otherwise the message indicates the final score. An added challenge to the game play for user's is that the mole speeds up after the score reaches 10 points, thus added 3 levels to the game play. The user can play the game again by clikcing on the start button and the game resets and the score starts at zero.
+The aim of the game is to whack as many moles as it pops up in the holes within the 30 seconds of the game time. If the user achieves the highest score, a feedback message appears above the score section to indicate this, otherwise the message indicates the final score. An added challenge to the game play for user's is that the mole speeds up after the score reaches 10 points, thus adding 3 levels to the game play. The user can play the game again by clicking on the start button and the game resets and the score starts at zero.
 
 ![Responsiveness](assets/images/amiresponsive.webp) 
 
@@ -15,20 +15,22 @@ The aim of the game is to whack as many moles as it pops up in the holes within 
 ### Creative Rationale
 As human beings, it is imperative to be active for the benefit of health and mind well-being. Regular exercise, healthy nutrition and a sharp mind are all elements to living a balanced life.
 
-The most unnoticed and first form of exercise which all humans start off with at a very young age is the ability to practice eye and hand coordination. A baby picks up an object, touches it, tastes it and throws it and the action is repeated. this simple task is the fundamental building blocks of hand eye corrdinitation. This is the most basic form of exercise and as we grow up unto adults, we tend to not exercise certain muscle. Today, this exercise is used in all basic training from Football to Formula One, where athletes are using this exercise in their regular training regimes.
+The most unnoticed and first form of exercise which all humans start off with at a very young age is the ability to practice hand and eye coordination. A baby picks up an object, touches it, tastes it and throws it and the action is repeated. This simple task is the fundamental building blocks of hand and eye coordination. Today, this exercise is used in all forms of basic training from Football to Formula One, where athletes are using this exercise in their regular training regimes.
 
-This is the inspiration for my idea for project 2. I wanted to create a game that is fun, interactive and Whack A Mole is a old classic game which was a ideal to exercise hand and eye coordination.
+This is the inspiration for my idea for Portfolio Project 2. I wanted to create a game that is fun, interactive and Whack A Mole is a old classic game which is ideal to exercise hand and eye coordination.
 
 
 ### Color scheme
 
-This game is meant to be fun and I wanted a color that best represents that essence and I chose to use the color Orange. The second colour to complement and contrast against the Orange is White as it also allows for easy readibility. Below is a breakdown of the colors and their usage. An accent color of Dark Grey which represents mystery and is used to compliment the design and used minimally.
+This game is meant to be fun and I wanted a color that best represents that essence and I chose to use the color Orange. The second colour to complement and contrast against the Orange is White as it also allows for easy readibility. Below is a breakdown of the colors and their usage. An accent color of Dark Grey which represents mystery and is used to compliment the design and used minimally. The color black was used for the start button as well as the text indicating the game level.
 
   - #B45F06 (Orange) used as background color.
 
-  - #ffffff (White) used for all text.
+  - #ffffff (White) used for all text (except the game level indicator).
 
   - #333333 (Dark Grey) used for the holes.
+
+  - #000000 (Black) used on text (game level indicator) and start button.
 
 ![Color palette](assets/images/color-palette.webp) 
 
@@ -51,8 +53,7 @@ I used Balsamiq to create a wireframe of the website.
 
 ### Game function wireframe:
 
-Before I started designing the website, I went to the drawing board to map out the design structure. 
-I used Balsamiq to create a wireframe of the website.
+After the website wireframe was done, I focused on designing the game structure. Below is the framework for the game:
 
 ![Responsiveness](assets/images/game-wireframe.webp) 
 
@@ -60,7 +61,7 @@ I used Balsamiq to create a wireframe of the website.
 
 ## Features
 
-The project consists of basic functions to operate and include the following:
+The project consists of basic features to operate which include the following:
 
 ### Header
 
@@ -91,26 +92,25 @@ The game arena is the dedicated area which consists of circles which represents 
 
 Indicates that the game is over and shows the user's their final score with the message - "Game Over! Your final score is:". If the user scored higher than the high score, then the message shows "Game Over! New High Score:".
 
-----
-### Score:
+#### Score:
 
 ![Responsiveness](assets/images/score-area.webp) 
 
 The game area contains the score (shows the user's score after completing game), the timer (counts down the time for user to complete the game) and high score (shows the user the high score to beat).
 
-----
-### Timer:
+#### Timer:
 
 ![Responsiveness](assets/images/timer.webp) 
 
 The timer counts down the time from 30 seconds in which the user needs to whack as many moles as they can. Once the timer reaches 5 seconds, the color will change to crimson to indicate that time is almost up.
 
-----
-### High Score:
+#### High Score:
 
 ![Responsiveness](assets/images/high-score.webp) 
 
 Indicates the user's highest score and records it to the local storage.
+
+
 
 ## Start button
 
@@ -118,7 +118,7 @@ Indicates the user's highest score and records it to the local storage.
 
 This allows users to start a new game.
 
-----
+
 
 ## Technologies used:
 
@@ -131,7 +131,7 @@ This allows users to start a new game.
   - Javascript
     * Running functions for interactive components.
 
-----
+
 
 ## Testing
 
@@ -142,7 +142,6 @@ Manual testing:
 > [!NOTE]  
 > For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
-----
 
 ## Bugs
 
@@ -162,7 +161,6 @@ Manual testing:
 ### Unfixed bugs:
 
 
-----
 
 ## Deployments
 
