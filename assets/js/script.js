@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let timeRemaining;
     let currentLevel = 1; // Start at level 1
     let moleSpeed = 1000; // Initial mole speed
+    let isGameActive = false; // Tracks if game is running
 
     console.log("Game initialized. Ready to start!");
 
@@ -22,21 +23,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Random select hole function
     function randomHole() {
         const index = Math.floor(Math.random() * holes.length);
-        const selectedHole = holes[index];
-        console.log(`Selected hole index: ${index}`);
-        let lastHole;
-
-        // Prevent the same hole from being selected consecutively
-        if (selectedHole === lastHole) {
-            console.log("Same hole selected again. Choosing a different hole.");
-            return randomHole();
-        }
-        lastHole = selectedHole;
-        return selectedHole;
+        return holes[index];
     }
 
     // Function to make mole pop up in hole
     function showMole() {
+        if (!isGameActive) return; // Stop mole pop up if game over
+        
         const hole = randomHole();
         const mole = hole.querySelector(".mole");
         mole.style.display = "block";
@@ -44,9 +37,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Hide mole after a few seconds
         setTimeout(() => {
-            mole.style.display = "none";
+            if (isGameActive) mole.style.display = "none"; // Mole hides only in active game
             console.log("Mole hidden.");
         }, Math.random() * 400 + 600);
+    }
+
+    // Function to hide all moles when game over
+    function resetMoles() {
+        holes.forEach(hole => {
+            const mole = hole.querySelector(".mole");
+            mole.style.display = "none"; // Hides visible moles
+        })
     }
 
     // Start game function
@@ -55,11 +56,14 @@ document.addEventListener("DOMContentLoaded", function () {
         timeRemaining = gameTime;
         currentLevel = 1; // Reset to level 1
         moleSpeed = 1000; // Reset speed of mole
+        isGameActive = true; // Mark game active
         scoreDisplay.textContent = "00"; // Reset score
         timerDisplay.textContent = timeRemaining; // Reset timer
         messageElement.style.display = "none"; // Hide game over message
         startButton.disabled = true; // Disable the start button during the game
         updateLevelDisplay();
+
+        resetMoles(); // Hide all moles from previous game
 
         console.log("Game started!");
 
@@ -67,20 +71,38 @@ document.addEventListener("DOMContentLoaded", function () {
             showMole(); // Show mole continuously
         }, moleSpeed); 
 
-        const timerInterval = setInterval(updateTimer, 1000); // Start timer
+        const timerInterval = setInterval(() => {
+            updateTimer(timerInterval);
+        }, 1000); // Start timer
+    }
 
-        // Stop game after time runs out
-        setTimeout(() => {
-            clearInterval(gameInterval); // Stop mole popping up
+    // Function to update Timer
+    function updateTimer(timerInterval) {
+        timeRemaining--;
+        timerDisplay.textContent = timeRemaining;
+
+        // Change color of timer when timer is 5 seconds or less
+        if (timeRemaining <= 5) {
+            console.log(`Hurry up! Only ${timeRemaining} seconds left!`);
+            timerDisplay.style.color = "crimson";
+        } else {
+            timerDisplay.style.color = ""; // Reset to default color
+        }
+
+        if (timeRemaining <= 0) {
             clearInterval(timerInterval); // Stop timer
+            clearInterval(gameInterval); // Stop mole pop up
+            isGameActive = false; // Mark game inactive
             endGame(); // End game
-        }, gameTime * 1000);
+        }
     }
 
     // Function to whack mole
     holes.forEach(hole => {
         const mole = hole.querySelector(".mole");
         mole.addEventListener("click", function () {
+            if (!isGameActive) return; // Ignore clicks if game over
+
             mole.style.display = "none"; // Hide the mole when clicked
             score++; // Increase score
             scoreDisplay.textContent = score.toString().padStart(2, "0"); // Update score display
@@ -100,20 +122,6 @@ document.addEventListener("DOMContentLoaded", function () {
         gameInterval = setInterval(showMole, moleSpeed); // Start new interval with updated speed
         updateLevelDisplay();
         console.log(`Level Up! Current level ${currentLevel}. Mole speed: ${moleSpeed}ms`);
-    }
-
-    // Function to update Timer
-    function updateTimer() {
-        timeRemaining--;
-        timerDisplay.textContent = timeRemaining;
-
-        // Change color of timer when timer is 5 seconds or less
-        if (timeRemaining <= 5) {
-            console.log(`Hurry up! Only ${timeRemaining} seconds left!`);
-            timerDisplay.style.color = "crimson";
-        } else {
-            timerDisplay.style.color = ""; // Reset to default color
-        }
     }
 
     // Function to end game

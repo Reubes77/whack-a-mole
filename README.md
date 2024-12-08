@@ -155,7 +155,7 @@ Manual testing:
 
   - Moles stopped popping up after a Level to Display difficulty function and a function to update Level Display was included to add a challenge for users playing this game. The fix was to declare the const levelDisplay = document.getElementById("level"). This allowed the moles to pop up as expected.
 
-  - Bug occured where the score did not reflect the "Game Over" message. Once the time ran out, a mole popped up again which was an error, and if the user mistakenly clicked on it, then the scores were different. 
+  - The mole still popped up after the timer turned to 0 and the score did not reflect the "Game Over" message. The problem was that the setTimeout call was inside the showMole function, therefore, I had to move the setTimeout 
 
 
 ### Unfixed bugs:
