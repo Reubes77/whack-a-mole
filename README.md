@@ -39,7 +39,7 @@ This game is meant to be fun and I wanted a color that best represents that esse
   [fonts.google.com](https://fonts.google.com/) was used to help generate the font as follows:
 
   - Inter was used for the all text in the game.
-  - Inter was selected because it is a sans serif and compliments the purpose of the game. 
+  - It is a sans serif and compliments the purpose of the game. 
   - It is also a readable and clear font.
 
   * Font Awesome icon was used for the tab icon in the browser.
@@ -61,7 +61,7 @@ After the website wireframe was done, I focused on designing the game structure.
 
 ## Features
 
-The project consists of basic features to operate which include the following:
+The project consists of basic features which include the following:
 
 ### Header
 
@@ -74,14 +74,14 @@ The header consists of the logo which depicts our mole and the name of the game,
 
 ![Responsiveness](assets/images/instruction.webp) 
 
-A paragraph gives the user instruction on the method in which to play the game.
+A paragraph gives the user instruction on how to play the game.
 
 ----
 ### Game Arena
 
 ![Responsiveness](assets/images/game-arena.webp) 
 
-The game arena is the dedicated area which consists of circles which represents holes through which the mole appears and disappears.
+The game arena is the dedicated area which consists of circles representing the holes through which the mole appears and disappears.
 
 ----
 ### Score Area
@@ -96,13 +96,13 @@ Indicates that the game is over and shows the user's their final score with the 
 
 ![Responsiveness](assets/images/score-area.webp) 
 
-The game area contains the score (shows the user's score after completing game), the timer (counts down the time for user to complete the game) and high score (shows the user the high score to beat).
+This area contains the score which indicates the user's score after completed the game.
 
 #### Timer:
 
 ![Responsiveness](assets/images/timer.webp) 
 
-The timer counts down the time from 30 seconds in which the user needs to whack as many moles as they can. Once the timer reaches 5 seconds, the color will change to crimson to indicate that time is almost up.
+The timer counts down the time from 30 seconds. The user is required to whack as many moles as they can. Once the timer reaches 5 seconds, the color will change to crimson to indicate that time is almost up.
 
 #### High Score:
 
@@ -111,13 +111,11 @@ The timer counts down the time from 30 seconds in which the user needs to whack 
 Indicates the user's highest score and records it to the local storage.
 
 
-
 ## Start button
 
 ![Responsiveness](assets/images/start-button.webp) 
 
 This allows users to start a new game.
-
 
 
 ## Technologies used:
@@ -138,6 +136,15 @@ This allows users to start a new game.
 Manual testing:
 
   - CSS - media queries tested to see responsiveness and picked up issues on screens with min-width (600px and down - 1200px and up). These issues were resolved through Chrome Devtools as well as checking responsiveness on Am I Responsive website.
+
+  - I tested the site on my Android device, going through the entire process.
+
+  - The site was also sent to friends and relatives for them to follow the same process. 
+
+  - Chrome was utilised to inspect the site in all formats, going through the HTML, CSS and functions.
+
+  - The site was also tested on other browsers, such as Firefox and Safari.
+
 
 > [!NOTE]  
 > For all testing, please refer to the [TESTING.md](TESTING.md) file.

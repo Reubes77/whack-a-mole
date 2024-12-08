@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         holes.forEach(hole => {
             const mole = hole.querySelector(".mole");
             mole.style.display = "none"; // Hides visible moles
-        })
+        });
     }
 
     // Start game function
