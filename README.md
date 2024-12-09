@@ -166,6 +166,10 @@ Manual testing:
 
   - The mole from the previous game was still active when a new game was started. The bug was fixed by resetting the mole functions by looping through the holes and hide moles that become visible as well as call the resetMoles in the startGame function by ensuring the game starts with no moles visible.
 
+  - Error message 404 was picked up due to the href of site.webmanifest not being correct. The bug was fixed by using the correct relative path of the file in the head of the index.html file.
+
+
+
 
 ## Deployments
 

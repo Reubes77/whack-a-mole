@@ -1,3 +1,4 @@
+/* jshint esversion:11 */
 document.addEventListener("DOMContentLoaded", function () {
     const holes = document.querySelectorAll(".hole"); // Select all holes
     const scoreDisplay = document.getElementById("score"); // Displays score
@@ -26,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (holes.length === 0) throw new Error("No holes avalaible!");
             const index = Math.floor(Math.random() * holes.length);
             return holes[index];
-        } catch {
+        } catch (error){
             console.error("Error selecting random hole:", error);
             return null; // Return null if errors occur
         }
