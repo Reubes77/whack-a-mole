@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    
+    <!-- Header section -->
     <header>
         <h1 class="heading">
             <img class="mole-logo" src="assets/images/mole-logo.png" alt="mole-logo"> Whack A Mole!
@@ -27,11 +27,12 @@
         </p>
     </header>
 
-    
+    <!-- Main Content section -->
     <main>
-        
+        <!-- Game section -->
         <section>
             <div class="game-arena">
+                <!-- Holes for moles to appear and disappear -->
                 <div class="hole">
                     <img class="mole" src="assets/images/mole.png" alt="Mole" style="display: none;">
                 </div>
@@ -64,7 +65,7 @@
         <section>
             <div id="game-over-message" style="display: none;"></div>
         </section>
-        
+        <!-- Score section -->
         <section>
             <div id="score-area">
                 <h2 class="score-text">Score: <span id="score">00</span></h2>
@@ -73,12 +74,10 @@
                 <h3 class="high-score-text">Highest score: <span id="high-score">00</span></h3>
             </div>
         </section>
-        
-        <section>
-            <div>
-                <button id="start-button">Start game</button>
-            </div>
-        </section>
+        <!-- Start game button -->
+        <footer>
+            <button id="start-button">Start game</button>
+        </footer>
     </main>
     <script src="assets/js/script.js"></script>
 </body>
