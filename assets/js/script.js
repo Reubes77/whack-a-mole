@@ -22,8 +22,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Random select hole function
     function randomHole() {
-        const index = Math.floor(Math.random() * holes.length);
-        return holes[index];
+        try {
+            if (holes.length === 0) throw new Error("No holes avalaible!");
+            const index = Math.floor(Math.random() * holes.length);
+            return holes[index];
+        } catch {
+            console.error("Error selecting random hole:", error);
+            return null; // Return null if errors occur
+        }
     }
 
     // Function to make mole pop up in hole
@@ -31,6 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!isGameActive) return; // Stop mole pop up if game over
         
         const hole = randomHole();
+        if (!hole) return; // Skip if no valid hole
+
         const mole = hole.querySelector(".mole");
         mole.style.display = "block";
         console.log("Mole popped up in hole:", hole);
@@ -52,28 +60,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Start game function
     function startGame() {
-        score = 0;
-        timeRemaining = gameTime;
-        currentLevel = 1; // Reset to level 1
-        moleSpeed = 1000; // Reset speed of mole
-        isGameActive = true; // Mark game active
-        scoreDisplay.textContent = "00"; // Reset score
-        timerDisplay.textContent = timeRemaining; // Reset timer
-        messageElement.style.display = "none"; // Hide game over message
-        startButton.disabled = true; // Disable the start button during the game
-        updateLevelDisplay();
+        try {
+            score = 0;
+            timeRemaining = gameTime;
+            currentLevel = 1; // Reset to level 1
+            moleSpeed = 1000; // Reset speed of mole
+            isGameActive = true; // Mark game active
+            scoreDisplay.textContent = "00"; // Reset score
+            timerDisplay.textContent = timeRemaining; // Reset timer
+            messageElement.style.display = "none"; // Hide game over message
+            startButton.disabled = true; // Disable the start button during the game
+            updateLevelDisplay();
 
-        resetMoles(); // Hide all moles from previous game
+            resetMoles(); // Hide all moles from previous game
 
-        console.log("Game started!");
+            console.log("Game started!");
 
-        gameInterval = setInterval(() => {
-            showMole(); // Show mole continuously
-        }, moleSpeed); 
+            gameInterval = setInterval(() => {
+                showMole(); // Show mole continuously
+            }, moleSpeed); 
 
-        const timerInterval = setInterval(() => {
-            updateTimer(timerInterval);
-        }, 1000); // Start timer
+            const timerInterval = setInterval(() => {
+                updateTimer(timerInterval);
+            }, 1000); // Start timer
+        } catch (error) {
+            console.error("Error starting the game:", error);
+        }
     }
 
     // Function to update Timer
@@ -99,19 +111,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to whack mole
     holes.forEach(hole => {
-        const mole = hole.querySelector(".mole");
-        mole.addEventListener("click", function () {
-            if (!isGameActive) return; // Ignore clicks if game over
+        try {
+            const mole = hole.querySelector(".mole");
+            mole.addEventListener("click", function () {
+                if (!isGameActive) return; // Ignore clicks if game over
 
-            mole.style.display = "none"; // Hide the mole when clicked
-            score++; // Increase score
-            scoreDisplay.textContent = score.toString().padStart(2, "0"); // Update score display
+                mole.style.display = "none"; // Hide the mole when clicked
+                score++; // Increase score
+                scoreDisplay.textContent = score.toString().padStart(2, "0"); // Update score display
 
-            // Difficulty increase after every 10 points
-            if (score % 10 === 0) {
-                increaseDifficulty();
-            }
-        });
+                // Difficulty increase after every 10 points
+                if (score % 10 === 0) {
+                    increaseDifficulty();
+                }
+            });
+        } catch (error) {
+            console.error("Error adding click event listener to mole:", error);
+        }
     });
 
     // Function to increase difficulty
@@ -128,14 +144,19 @@ document.addEventListener("DOMContentLoaded", function () {
     function endGame() {
         startButton.disabled = false; // Re-enable start button
 
-        // Check if current score is higher than the highest score stored in LocalStorage
-        let highestScore = parseInt(localStorage.getItem("highestScore")) || 0;
+        try {
+            // Check if current score is higher than the highest score stored in LocalStorage
+            let highestScore = parseInt(localStorage.getItem("highestScore")) || 0;
 
-        if (score > highestScore) {
+            if (score > highestScore) {
             localStorage.setItem("highestScore", score); // Save new high score
             messageElement.textContent = `Game Over! New High Score: ${score}`;
-        } else {
+            } else {
             console.log(`Game Over! Your final score is: ${score}`);
+            messageElement.textContent = `Game Over! Your final score is: ${score}`;
+            }
+        } catch (error) {
+            console.error("Error accessing localStorage:", error);
             messageElement.textContent = `Game Over! Your final score is: ${score}`;
         }
 
@@ -145,8 +166,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to display the highest score
     function displayHighScore() {
-        const highScore = parseInt(localStorage.getItem("highestScore")) || 0;
-        highScoreDisplay.textContent = highScore.toString().padStart(2, "0");
+        try {
+            const highScore = parseInt(localStorage.getItem("highestScore")) || 0;
+            highScoreDisplay.textContent = highScore.toString().padStart(2, "0");
+        } catch (error) {
+            console.error("Error retrieving high score from localStorage:", error);
+            highScoreDisplay.textContent = "00"; // Default to 00 on error
+        }
     }
 
     // Function to update Level Display
