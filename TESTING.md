@@ -27,7 +27,7 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 | File | screenshot | Notes |                                                                                                 |
 | --- | --- | --- | ----------------------------------------------------------------------------------------------------------|
-| script.js  | ![screenshot](assets/images/java-validation.webp) |  Pass: No Errors |
+| script.js  | ![screenshot](assets/images/java-validation.webp) |  One warning. One undefined variable. |
 
 
 ## Browser Compatibility
