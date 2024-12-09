@@ -23,7 +23,7 @@ body {
 /* Header section */
 .mole-logo {
     margin: 0 15px 0 0;
-    max-width: 7%;
+    max-width: 8%;
 }
 
 .heading {
@@ -166,11 +166,11 @@ footer {
 
     .mole-logo {
         margin: 0 10px 0 0;
-        width: 10%;
+        max-width: 10%;
     }
 
     .sub-text {
-        font-size: small;
+        font-size: x-small;
         margin: 0 40px 15px 40px;
     }
 

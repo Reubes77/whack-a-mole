@@ -42,12 +42,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const mole = hole.querySelector(".mole");
         mole.style.display = "block";
-        console.log("Mole popped up in hole:", hole);
 
         // Hide mole after a few seconds
         setTimeout(() => {
             if (isGameActive) mole.style.display = "none"; // Mole hides only in active game
-            console.log("Mole hidden.");
         }, Math.random() * 400 + 600);
     }
 
@@ -75,8 +73,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             resetMoles(); // Hide all moles from previous game
 
-            console.log("Game started!");
-
             gameInterval = setInterval(() => {
                 showMole(); // Show mole continuously
             }, moleSpeed); 
@@ -96,7 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Change color of timer when timer is 5 seconds or less
         if (timeRemaining <= 5) {
-            console.log(`Hurry up! Only ${timeRemaining} seconds left!`);
             timerDisplay.style.color = "crimson";
         } else {
             timerDisplay.style.color = ""; // Reset to default color
@@ -138,7 +133,6 @@ document.addEventListener("DOMContentLoaded", function () {
         clearInterval(gameInterval); // Clear current interval
         gameInterval = setInterval(showMole, moleSpeed); // Start new interval with updated speed
         updateLevelDisplay();
-        console.log(`Level Up! Current level ${currentLevel}. Mole speed: ${moleSpeed}ms`);
     }
 
     // Function to end game
@@ -153,7 +147,6 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem("highestScore", score); // Save new high score
             messageElement.textContent = `Game Over! New High Score: ${score}`;
             } else {
-            console.log(`Game Over! Your final score is: ${score}`);
             messageElement.textContent = `Game Over! Your final score is: ${score}`;
             }
         } catch (error) {
@@ -183,7 +176,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Attach start game to button
     startButton.addEventListener("click", function () {
-        console.log("Start button clicked.");
         startGame(); // Start new game
     });
 });
