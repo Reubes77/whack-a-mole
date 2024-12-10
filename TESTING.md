@@ -27,7 +27,16 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 | File | screenshot | Notes |                                                                                                 |
 | --- | --- | --- | ----------------------------------------------------------------------------------------------------------|
-| script.js  | ![screenshot](assets/images/java-validation.webp) |  One warning. One undefined variable. |
+| script.js  | ![screenshot](assets/images/java-validation.webp) |  Pass: No Errors |
+
+### WAVE Web Accessibility Evaluation Tool
+
+I've also tested my deployed project on WAVE Web Accessibility Evaluation Tool to check for any issues.
+
+| Browser | Summary | Details | Structure | Contrast | Homepage | Notes |
+| --- | --- | --- | --- | --- | --- | --- |
+| Chrome | ![screenshot](assets/images/webaim-summary.webp) | ![screenshot](assets/images/webaim-details.webp) | ![screenshot](assets/images/webaim-structure.webp) | ![screenshot](assets/images/webaim-contrast.webp) | ![screenshot](assets/images/webaim-page.webp) | Pass: No Errors |
+| |
 
 
 ## Browser Compatibility
