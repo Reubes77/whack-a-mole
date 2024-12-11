@@ -51,6 +51,9 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Chrome | ![screenshot](assets/images/chrome-home-page.webp) | Works as expected |
 | Firefox | ![screenshot](assets/images/firefox-home-page.webp) | Works as expected |
 | Safari | ![screenshot](assets/images/safari-home-page.webp) | Works as expected |
+| Chrome | ![screenshot](assets/images/chrome-404-home-page.webp) | Works as expected |
+| Firefox | ![screenshot](assets/images/firefox-404-home-page.webp) | Works as expected |
+| Safari | ![screenshot](assets/images/safari-404-home-page.webp) | Works as expected |
 
 ## Lighthouse Audit
 
@@ -59,6 +62,7 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Page | Mobile | Desktop | Notes |
 | --- | --- | --- | --- | 
 | Home | ![screenshot](assets/images/lhs-mobile.webp) | ![screenshot](assets/images/lhs-desktop.webp) | Warnings: Resource are blocking the first paint of your page and error logged to console due to network request failure. |
+| 404 error page | ![screenshot](assets/images/404-lhs-mobile.webp) | ![screenshot](assets/images/404-lhs-desktop.webp) | Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 404) |
 
 ## Responsiveness
 
