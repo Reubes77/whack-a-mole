@@ -11,7 +11,7 @@
 /* General page styles */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #B45F06;
+    background-color: #b45f06;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -475,3 +475,66 @@ footer {
         border-radius: 10px;
     }
   }
+
+/* 404 Page Styles */
+body.error-page {
+    background-color: #b45f06;
+    color: #333333;
+    /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
+    text-align: center;
+    padding: 20px;
+}
+
+header.error-page-header .header {
+    margin-top: 50px;
+}
+
+header.error-page-header .header {
+    font-size: 2.5em;
+    color: #ff6f61;
+}
+
+header.error-page-header .sub-text {
+    font-size: 1.2em;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+/* Error message section */
+.error-message h2{
+    font-size: 2em;
+    color: #333333;
+    margin: 20px 0;
+}
+
+.error-message p {
+    font-size: 1em;
+    color: #666666;
+    margin: 10px 0 30px;
+}
+
+/* Navigation section */
+.navigation {
+    margin-top: 20px;
+}
+
+.navigation .home-link {
+    display: inline-block;
+    background-color: #ff6f61;
+    color: #ffffff;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.navigation .home-link:hover {
+    background-color: #e85850;
+}
+
+/* Footer section */
+footer.error-page-footer {
+    margin-top: 50px;
+    color: #aaaaaa;
+    font-size: 0.9em;
+}
