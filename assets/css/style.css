@@ -479,7 +479,7 @@ footer {
 /* 404 Page Styles */
 body.error-page {
     background-color: #b45f06;
-    color: #000000;
+    color: #333333;
     /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
     text-align: center;
     padding: 20px;
@@ -503,7 +503,7 @@ header.error-page-header .sub-text {
 /* Error message section */
 .error-message h2{
     font-size: 2em;
-    color: #333333;
+    color: #000000;
     margin: 20px 0;
 }
 
