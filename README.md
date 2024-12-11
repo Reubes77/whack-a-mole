@@ -44,6 +44,52 @@ This game is meant to be fun and I wanted a color that best represents that esse
 
   * Font Awesome icon was used for the tab icon in the browser.
 
+# Case stories
+
+  **For adults:** 
+  - <ins>User Goal</ins><br>
+    - The user wants to easily navigate the game.
+    - The user wants to see their score and level progress clearly.
+
+  - <ins>User End Goal</ins><br>
+    - The user wants to have a seamless gaming experience.
+    - The user wants to have a sense of achievement and progress.
+  
+  - <ins>User Business Goal</ins><br>
+    - Increase user engagement and experience.
+    - Motivate players to continue to play.
+
+  **For kids:**
+  - <ins>User Goal</ins><br>
+    - The user finds the game visually appealing through colorful and enagaging graphics.
+    - The user to experience a simple interface to easily understand and navigate and play the game.
+
+  - <ins>User End Goal</ins><br>
+    - The user wants to have a enjoyable and fun gaming experience.
+    - The simple interface allows mimimum frustration thus allowing for maximum enjoyment of the game play.
+  
+  - <ins>User Business Goal</ins><br>
+    - Reduce the learning curve and maximise enjoyment.
+    - Create a engaging and immersive game.
+
+### First time user goals:
+----
+I want the first time user to test their reflex skills in being able to whack the mole as fast as they can.
+
+I want the user to be try to beat their highest score.
+
+### Return user goals:
+----
+I want the first time user to test their reflex skills in being able to whack the mole as fast as they can.
+
+I want the user to be try to beat their highest score.
+
+### Business goals:
+----
+Drive feet to the website.
+
+Prompt users to play the game.
+
 ### Website wireframe (created on Balsamiq):
 
 Before I started designing the website, I went to the drawing board to map out the design structure. 
@@ -63,7 +109,7 @@ After the website wireframe was done, I focused on designing the game structure.
 
 The project consists of basic features which include the following:
 
-### Header
+### Header:
 
 ![Responsiveness](assets/images/header.webp) 
 
@@ -77,6 +123,8 @@ The header consists of the logo which depicts our mole and the name of the game,
 A paragraph gives the user instruction on how to play the game.
 
 ----
+
+## Main body:
 ### Game Arena
 
 ![Responsiveness](assets/images/game-arena.webp) 
@@ -111,7 +159,8 @@ The timer counts down the time from 30 seconds. The user is required to whack as
 Indicates the user's highest score and records it to the local storage.
 
 
-## Start button
+## Footer:
+### Start button
 
 ![Responsiveness](assets/images/start-button.webp) 
 

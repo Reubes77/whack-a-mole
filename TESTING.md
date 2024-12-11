@@ -66,3 +66,6 @@ I've tested my deployed project for responsiveness issues.
 | Mobile (DevTools) | ![screenshot](assets/images/mobile-responsive.png) | Works as expected | 
 | Tablet (DevTools) | ![screenshot](assets/images/tablet-responsive.png) | Works as expected |
 | Desktop (DevTools) | ![screenshot](assets/images/desktop-responsive.png) | Works as expected |
+
+> [!NOTE]  
+> Return back to the [README.md](README.md) file.
