@@ -99,7 +99,6 @@ The project consists of basic features which include the following:
 
 The header consists of the logo which depicts our mole and the name of the game, Whack A Mole!
 
-----
 ### Instruction
 
 ![Responsiveness](assets/images/instruction.webp) 
@@ -108,47 +107,49 @@ A paragraph gives the user instruction on how to play the game.
 
 ----
 
-## Main body:
-### Game Arena
+### Main body:
+#### Game Arena
 
 ![Responsiveness](assets/images/game-arena.webp) 
 
 The game arena is the dedicated area which consists of circles representing the holes through which the mole appears and disappears.
 
-----
-### Score Area
 
-#### Feedback message:
+#### Score Area
+
+##### Feedback message:
 
 ![Responsiveness](assets/images/feedback-message.webp) 
 
 Indicates that the game is over and shows the user's their final score with the message - "Game Over! Your final score is:". If the user scored higher than the high score, then the message shows "Game Over! New High Score:".
 
-#### Score:
+##### Score:
 
 ![Responsiveness](assets/images/score-area.webp) 
 
 This area contains the score which indicates the user's score after completed the game.
 
-#### Timer:
+##### Timer:
 
 ![Responsiveness](assets/images/timer.webp) 
 
 The timer counts down the time from 30 seconds. The user is required to whack as many moles as they can. Once the timer reaches 5 seconds, the color will change to crimson to indicate that time is almost up.
 
-#### High Score:
+##### High Score:
 
 ![Responsiveness](assets/images/high-score.webp) 
 
 Indicates the user's highest score and records it to the local storage.
 
+-----
 
-## Footer:
-### Start button
+### Footer:
+#### Start button
 
 ![Responsiveness](assets/images/start-button.webp) 
 
 This allows users to start a new game.
+
 
 
 ## Technologies used:
@@ -221,6 +222,7 @@ Manual testing:
 
 The live link can be found [here:](https://reubes77.github.io/whack-a-mole/)
 
+
 ## Credits
 
 ### Content
@@ -237,7 +239,7 @@ The live link can be found [here:](https://reubes77.github.io/whack-a-mole/)
 
     - [Dev Drawer] (https://www.youtube.com/watch?v=WGekurbM1Hg)
 
-3.  My mentor Rory Sheridan for his advice and guidance on how to debug the code, create a feedback message on the page instead of an alert message and add a level of difficulty to the game.
+3.  My mentor, Rory Sheridan, for his advice and guidance on how to debug the code, create a feedback message on the page instead of an alert message and add a level of difficulty to the game.
 
 ### Media
 
