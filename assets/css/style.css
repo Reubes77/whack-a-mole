@@ -479,7 +479,7 @@ footer {
 /* 404 Page Styles */
 body.error-page {
     background-color: #b45f06;
-    color: #333333;
+    color: #ffffff;
     text-align: center;
     padding: 20px;
 }
@@ -519,7 +519,7 @@ header.error-page-header .sub-text {
 
 .navigation .home-link {
     display: inline-block;
-    background-color: #333333;
+    background-color: #000000;
     color: #ffffff;
     font-size: 1.2em;
     text-decoration: none;
@@ -528,13 +528,13 @@ header.error-page-header .sub-text {
 }
 
 .navigation .home-link:hover {
-    background-color: #e85850;
+    background-color: #000000;
 }
 
 /* Footer section */
 footer.error-page-footer {
     margin-top: 50px;
-    color: #aaaaaa;
+    color: #333333;
     font-size: 0.9em;
 }
 

@@ -12,6 +12,8 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | File | screenshot | Notes |                                                                                                 |
 | --- | --- | --- | ----------------------------------------------------------------------------------------------------------|
 | index.html | ![screenshot](assets/images/html-validation.webp) | Pass: No Errors |
+| 404.html | ![screenshot](assets/images/404-html-validation.webp) | Pass: No Errors |
+
 
 ### CSS
 
@@ -20,6 +22,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 | File | screenshot | Notes |                                                                                                 |
 | --- | --- | --- | ----------------------------------------------------------------------------------------------------------|
 | style.css  | ![screenshot](assets/images/css-validation.webp) |  Pass: No Errors |
+| 404 added to style.css  | ![screenshot](assets/images/404-css-validation.webp) |  Pass: No Errors |
 
 ### JavaScript
 
@@ -66,6 +69,10 @@ I've tested my deployed project for responsiveness issues.
 | Mobile (DevTools) | ![screenshot](assets/images/mobile-responsive.png) | Works as expected | 
 | Tablet (DevTools) | ![screenshot](assets/images/tablet-responsive.png) | Works as expected |
 | Desktop (DevTools) | ![screenshot](assets/images/desktop-responsive.png) | Works as expected |
+| Mobile (DevTools) | ![screenshot](assets/images/404-mobile-responsive.png) | Works as expected | 
+| Tablet (DevTools) | ![screenshot](assets/images/404-tablet-responsive.png) | Works as expected |
+| Desktop (DevTools) | ![screenshot](assets/images/404-desktop-responsive.png) | Works as expected |
+
 
 > [!NOTE]  
 > Return back to the [README.md](README.md) file.
