@@ -480,7 +480,6 @@ footer {
 body.error-page {
     background-color: #b45f06;
     color: #333333;
-    /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
     text-align: center;
     padding: 20px;
 }
@@ -496,7 +495,7 @@ header.error-page-header .header {
 
 header.error-page-header .sub-text {
     font-size: 1.2em;
-    color: #555555;
+    color: #333333;
     margin-bottom: 20px;
 }
 
@@ -520,7 +519,7 @@ header.error-page-header .sub-text {
 
 .navigation .home-link {
     display: inline-block;
-    background-color: #000000;
+    background-color: #333333;
     color: #ffffff;
     font-size: 1.2em;
     text-decoration: none;
