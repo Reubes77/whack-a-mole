@@ -44,7 +44,7 @@ This game is meant to be fun and I wanted a color that best represents that esse
 
   * Font Awesome icon was used for the tab icon in the browser.
 
-# Case stories
+## Case stories
 
   **For adults:** 
   - <ins>User Goal</ins><br>
@@ -72,23 +72,7 @@ This game is meant to be fun and I wanted a color that best represents that esse
     - Reduce the learning curve and maximise enjoyment.
     - Create a engaging and immersive game.
 
-### First time user goals:
 ----
-I want the first time user to test their reflex skills in being able to whack the mole as fast as they can.
-
-I want the user to be try to beat their highest score.
-
-### Return user goals:
-----
-I want the first time user to test their reflex skills in being able to whack the mole as fast as they can.
-
-I want the user to be try to beat their highest score.
-
-### Business goals:
-----
-Drive feet to the website.
-
-Prompt users to play the game.
 
 ### Website wireframe (created on Balsamiq):
 
