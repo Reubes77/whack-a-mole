@@ -1,6 +1,6 @@
 # Whack-A-Mole
 
-This is a classic game which allow the user to test their eye and hand coordination skills. The game is intended for all demographics (ages 5-80 years) as it is fun and easy to navigate and play. The webiste is fully responsive and shows how javascript is used to create an interactive game experience.
+This is a classic game which allows the user to test their eye and hand coordination skills. The game is intended for all demographics (ages 5-80 years) as it is fun and easy to navigate and play. The webiste is fully responsive and shows how javascript is used to create an interactive game experience.
 
 The aim of the game is to whack as many moles as it pops up in the holes within the 30 seconds of the game time. If the user achieves the highest score, a feedback message appears above the score section to indicate this, otherwise the message indicates the final score. An added challenge to the game play for user's is that the mole speeds up after the score reaches 10 points, thus adding 3 levels to the game play. The user can play the game again by clicking on the start button and the game resets and the score starts at zero.
 
@@ -42,7 +42,7 @@ This game is meant to be fun and I wanted a color that best represents that esse
   - It is a sans serif and compliments the purpose of the game. 
   - It is also a readable and clear font.
 
-  * Font Awesome icon was used for the tab icon in the browser.
+Font Awesome icon was used for the tab icon in the browser.
 
 ## Case stories
 
@@ -62,7 +62,7 @@ This game is meant to be fun and I wanted a color that best represents that esse
   **For kids:**
   - <ins>User Goal</ins><br>
     - The user finds the game visually appealing through colorful and enagaging graphics.
-    - The user to experience a simple interface to easily understand and navigate and play the game.
+    - The user to experience a simple interface to easily understand, navigate and play the game.
 
   - <ins>User End Goal</ins><br>
     - The user wants to have a enjoyable and fun gaming experience.
@@ -70,7 +70,7 @@ This game is meant to be fun and I wanted a color that best represents that esse
   
   - <ins>User Business Goal</ins><br>
     - Reduce the learning curve and maximise enjoyment.
-    - Create a engaging and immersive game.
+    - Create an engaging and immersive game.
 
 ----
 
@@ -127,7 +127,7 @@ Indicates that the game is over and shows the user's their final score with the 
 
 ![Responsiveness](assets/images/score-area.webp) 
 
-This area contains the score which indicates the user's score after completed the game.
+This area contains the score which indicates the user's score after completing the game.
 
 ##### Timer:
 
